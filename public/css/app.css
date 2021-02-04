@@ -15858,16 +15858,27 @@ body section .ligne:nth-of-type(4) button {
   width: 500px;
 }
 
-body .todo-item {
-  display: flex;
+body .todo {
   background-color: white;
-  justify-content: space-between;
-  margin: 10px;
-  padding: 10px;
   border-radius: 5px;
+  margin: 10px;
 }
 
-body .todo-item .divBtn .checkButton {
+body .todo .todo-item {
+  display: flex;
+  justify-content: space-between;
+  border-radius: 5px;
+  transition: all 0.5s ease;
+  width: 100%;
+  margin: 0;
+}
+
+body .todo .todo-item .todo-text {
+  color: #282b2e;
+  margin: 0px 10px;
+}
+
+body .todo .todo-item .divBtn .checkButton {
   background-color: #007BFF;
   border: none;
   margin: 0 5px;
@@ -15875,7 +15886,7 @@ body .todo-item .divBtn .checkButton {
   padding: 5px 10px;
 }
 
-body .todo-item .divBtn .deleteButton {
+body .todo .todo-item .divBtn .deleteButton {
   background-color: #DC3545;
   border: none;
   margin: 0 5px;
@@ -15883,10 +15894,25 @@ body .todo-item .divBtn .deleteButton {
   padding: 5px 10px;
 }
 
-body .todo-item .divBtn .editButton {
+body .todo .todo-item .divBtn .editButton {
   background-color: #28A745;
   border: none;
   margin: 0 5px;
   border-radius: 3px;
   padding: 5px 10px;
+}
+
+.fa-check, .fa-trash-alt, .fa-edit {
+  pointer-events: none;
+}
+
+.checked {
+  background-color: #4e9ef3;
+  color: white;
+  margin: 0;
+  margin: 10px;
+}
+
+.none {
+  display: none;
 }
